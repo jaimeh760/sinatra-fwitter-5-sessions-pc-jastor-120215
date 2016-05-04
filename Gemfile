@@ -10,5 +10,6 @@ group :development do
   gem "pry"
   gem "shotgun"
   gem "tux"
+  gem "bcrypt"
 end
 

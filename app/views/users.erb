@@ -1,11 +1,11 @@
-<h2>Users</h2>
+<h3>Fwitter Users:</h3>
 <% @users.each do |user| %>
   <p><%= user.username %></p>
 <% end %>
 
-<h3>Sign Up</h3>
+
 <form action="/sign-up" method="POST">
-  <p>Name: <input type="text" name="username"></p>
-  <p>Email: <input type="text" name="email"></p>
-  <input class="btn btn-primary" type="submit">
+  <p>Name <input type="text" name="username"></p>
+  <p>Email <input type="text" name="email"></p>
+  <input class="btn btn-primary" type="submit" value="Sign Up" class="submit-button">
 </form>

@@ -11,3 +11,56 @@
 .footer {
   margin-top: 25px;
 }
+
+body {
+  background: url(http://www.skringers.com/wp-content/uploads/Cute-backgrounds-for-computer-10.gif);
+  color: black;
+  text-align: center;
+  font-family: "Comic Sans MS", sans-serif;
+  
+}
+
+.navbar-brand {
+  color: #e6f2ff;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  
+}
+
+a:hover {
+  color: #e6f2ff;
+  background: transparent !important;
+}
+
+.container-fluid { 
+  background-color: #47d1d1;
+}
+
+.login {
+  width: 200px;
+}
+
+.signup{
+  width: 150px;
+}
+
+.tweet {
+  width: 150px;
+}
+
+.logout {
+  width: 200px;
+}
+
+.fwitter-icon {
+  float: left;
+  padding-right: 10px;
+}
+
+.welcome {
+  float: right !important;
+}

@@ -1,31 +1,40 @@
 <!doctype html>
 <html>
   <head>
-    <title>Week 4</title>
+    <title>Fwitter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+    
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="//login.create.net/images/icons/user/twitter_40x40.png" border=0 class="fwitter-icon">
+      <header class="navbar-brand">Fwitter</header>
+    </div>
+    
+    <ul class="nav navbar-nav">
 
-        <nav>
-      <ul>
-        <% if logged_in? %>
-            <li>Welcome, <%= current_user.username %></li>
-            <li><a href="/tweet">Post a Tweet!</a></li>
-            <li><a href="/logout">Logout</a></li>
-        <% else %>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/signup">Sign Up</a></li>
-        <% end %>
-      </ul>
-    </nav>
+    <ul class="nav navbar-nav navbar-right">
+      <% if logged_in? %>
+      <li class="welcome">Welcome, <%= current_user.username %></li>
+      <li class="tweet"><a href="/tweet">Post a Tweet!</a></li>
+      <li class="logout"><a href="/logout">Logout</a></li>
+      <% else %>
+      <li class="signup"><a href="/signup"><span class="glyphicon glyphicon-user"></span> Want to join? Sign Up!</a></li>
+      <li class="login"><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Already signed up? Login!</a></li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
 
     <div class="container">
       <h1>Welcome to Fwitter!</h1>
       <%= yield %>
     </div>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>

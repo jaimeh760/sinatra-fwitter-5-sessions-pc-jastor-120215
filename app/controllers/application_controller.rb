@@ -19,30 +19,26 @@ class ApplicationController < Sinatra::Base
     if session[:user_id]
       erb :tweet
     else
-      redirect "/login"
+      redirect '/login'
     end
   end
 
   post '/tweet' do
-    user = User.find_by(:user_id => session[:user_id])
+    user = User.find_by(:id => session[:user_id])
     tweet = Tweet.new(:user => user, :status => params[:status])
     tweet.save
     redirect '/'
   end
-
-  get '/users' do
+  
+  get '/signup' do
     @users = User.all
     erb :users
   end
-  
-  get '/signup' do
-    erb :signup
-  end
 
   post '/sign-up' do 
-    @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
+    @user = User.new(:username => params[:username], :email => params[:email])
     @user.save
-    redirect '/login'
+    redirect '/'
   end
   
   get '/login' do
@@ -53,28 +49,25 @@ class ApplicationController < Sinatra::Base
      user = User.find_by(:username => params[:username])
      if user
         session[:user_id] = user.id
-        redirect "/"
+        redirect '/'
      else
-        redirect "/signup"
+        redirect '/signup'
      end
   end
   
   get '/logout' do
     session.destroy
-    redirect "/login"
+    redirect '/login'
   end
   
-    helpers do
+  helpers do
     def logged_in?
       session[:user_id]
     end
   end
   
-    helpers do
-    def logged_in?
-      session[:user_id]
-    end
+  def current_user
+    User.find(session[:user_id])
   end
-  
   
 end
