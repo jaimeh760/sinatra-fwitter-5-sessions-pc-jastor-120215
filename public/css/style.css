@@ -33,11 +33,11 @@ ul {
 
 a:hover {
   color: #e6f2ff;
-  background: transparent !important;
+  background: white !important;
 }
 
 .container-fluid { 
-  background-color: #47d1d1;
+  background-color: #47d1d1 !important;
 }
 
 .login {
@@ -61,6 +61,22 @@ a:hover {
   padding-right: 10px;
 }
 
-.welcome {
+#welcome-user {
   float: right !important;
+  color: white;
+  margin-top: 15px;
+  margin-left: 1000px;
+  margin-right: 0;
 }
+
+.pro-pic {
+  position: fixed;
+  margin-left: 1110px;
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+  border-radius: 25px;
+  background-color: white;
+}
+
+

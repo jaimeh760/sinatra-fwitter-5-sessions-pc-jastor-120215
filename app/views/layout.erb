@@ -16,11 +16,10 @@
       <header class="navbar-brand">Fwitter</header>
     </div>
     
-    <ul class="nav navbar-nav">
-
+  <ul class="nav navbar-nav">
     <ul class="nav navbar-nav navbar-right">
       <% if logged_in? %>
-      <li class="welcome">Welcome, <%= current_user.username %></li>
+      <li id="welcome-user">Welcome, <%= current_user.username %></li><img src="http://1.bp.blogspot.com/-SxvE473htAE/T7eUVr-euPI/AAAAAAAADEA/zNBl3RAJA3o/s1600/twitter+vector.png" class="pro-pic">
       <li class="tweet"><a href="/tweet">Post a Tweet!</a></li>
       <li class="logout"><a href="/logout">Logout</a></li>
       <% else %>
