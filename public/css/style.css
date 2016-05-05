@@ -49,6 +49,7 @@ a:hover {
 
 .signup, .login, .tweet, .logout {
   margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .welcome-user {
@@ -61,7 +62,7 @@ a:hover {
 
 .pro-pic {
   float: right;
-  margin-top: 3px;
+  margin-top: 5px;
   margin-left: 10px;
   margin-right: 10px;
   width: 45px;
