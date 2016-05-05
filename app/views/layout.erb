@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <link rel="icon" type="image/png" href="http://icons.iconarchive.com/icons/arrioch/birdies/512/twitter-icon.png" class="b-icon">
     <title>Fwitter</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -19,9 +20,12 @@
   <ul class="nav navbar-nav">
     <ul class="nav navbar-nav navbar-right">
       <% if logged_in? %>
-      <li id="welcome-user">Welcome, <%= current_user.username %></li><img src="http://1.bp.blogspot.com/-SxvE473htAE/T7eUVr-euPI/AAAAAAAADEA/zNBl3RAJA3o/s1600/twitter+vector.png" class="pro-pic">
+      
+        <img src="http://1.bp.blogspot.com/-SxvE473htAE/T7eUVr-euPI/AAAAAAAADEA/zNBl3RAJA3o/s1600/twitter+vector.png" class="pro-pic">
+        <li class="welcome-user">Welcome, <%= current_user.username %></li>
+      
       <li class="tweet"><a href="/tweet">Post a Tweet!</a></li>
-      <li class="logout"><a href="/logout">Logout</a></li>
+      <li class="logout"><a href="/logout"> Logout</a></li>
       <% else %>
       <li class="signup"><a href="/signup"><span class="glyphicon glyphicon-user"></span> Want to join? Sign Up!</a></li>
       <li class="login"><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Already signed up? Login!</a></li>

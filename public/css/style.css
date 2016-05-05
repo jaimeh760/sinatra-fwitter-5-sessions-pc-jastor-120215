@@ -20,10 +20,6 @@ body {
   
 }
 
-.navbar-brand {
-  color: #e6f2ff;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
@@ -40,42 +36,45 @@ a:hover {
   background-color: #47d1d1 !important;
 }
 
-.login {
-  width: 200px;
-}
-
-.signup{
-  width: 150px;
-}
-
-.tweet {
-  width: 150px;
-}
-
-.logout {
-  width: 200px;
-}
-
 .fwitter-icon {
   float: left;
   padding-right: 10px;
+  margin-top: 5px;
 }
 
-#welcome-user {
+.navbar-brand {
+  color: #e6f2ff;
+  margin-top: 0px;
+}
+
+.signup, .login, .tweet, .logout {
+  margin-top: 2px;
+}
+
+.welcome-user {
   float: right !important;
   color: white;
-  margin-top: 15px;
-  margin-left: 1000px;
-  margin-right: 0;
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-right: 5px;
 }
 
 .pro-pic {
-  position: fixed;
-  margin-left: 1110px;
+  float: right;
+  margin-top: 3px;
+  margin-left: 10px;
+  margin-right: 10px;
   width: 45px;
   height: 45px;
   border-radius: 25px;
   background-color: white;
 }
 
+.b-icon {
+  width: 16;
+  height: 16;
+}
 
+.enter-user, .enter-email {
+  color: #bfbfbf;
+}
