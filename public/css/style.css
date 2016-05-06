@@ -29,7 +29,8 @@ ul {
 
 a:hover {
   color: #e6f2ff;
-  background: white !important;
+  background: white;
+  text-decoration: none !important;
 }
 
 .container-fluid { 
@@ -47,6 +48,11 @@ a:hover {
   margin-top: 0px;
 }
 
+.fwitter-header:hover {
+  color: white;
+  background-color: transparent;
+}
+
 .signup, .login, .tweet, .logout {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -61,7 +67,7 @@ a:hover {
 }
 
 .pro-pic {
-  float: right;
+  float: right !important;
   margin-top: 5px;
   margin-left: 10px;
   margin-right: 10px;
